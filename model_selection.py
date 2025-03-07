@@ -170,24 +170,24 @@ def optimize_model(objective_function, n_trials=50,n_jobs=-1):
     return study.best_params, study.best_value
 
 # 选择优化的模型
-# best_params_nb, best_score_nb = optimize_model(objective_nb)
-# best_params_rf, best_score_rf = optimize_model(objective_rf)
-# best_params_svc, best_score_svc = optimize_model(objective_svc)
-# best_params_lr, best_score_lr = optimize_model(objective_lr)
-# best_params_knn, best_score_knn = optimize_model(objective_knn,n_jobs=1)
-# best_params_mlp, best_score_mlp = optimize_model(objective_mlp)
-# best_params_adaboost, best_score_adaboost = optimize_model(objective_adaboost)
-# best_params_xgb, best_score_xgb = optimize_model(objective_xgb)
-# best_params_gbdt, best_score_gbdt = optimize_model(objective_gbdt)
-best_params_nb = {'var_smoothing': 9.732524675926293e-07}
-best_params_rf = {'n_estimators': 146, 'max_depth': 26, 'min_samples_split': 12, 'min_samples_leaf': 2, 'max_features': 'log2', 'bootstrap': False}
-best_params_svc = {'C': 68.10438395969796, 'gamma': 0.0046650970854461545, 'kernel': 'rbf'}
-best_params_lr = {'C': 60.801061547700456, 'penalty': 'l2', 'solver': 'lbfgs'}
-best_params_knn = {'n_neighbors': 30, 'weights': 'distance', 'algorithm': 'auto'}
-best_params_mlp = {'hidden_layer_sizes': (50,), 'activation': 'relu', 'solver': 'adam', 'alpha': 5.599647344838225e-05, 'learning_rate_init': 0.012301043983120692, 'early_stopping': True}
-best_params_adaboost = {'n_estimators': 248, 'learning_rate': 0.4442056458984761}
-best_params_xgb = {'max_depth': 6, 'learning_rate': 0.1406187747215624, 'n_estimators': 201, 'subsample': 0.9558079696044189, 'colsample_bytree': 0.5346372250120808, 'reg_alpha': 9.9402787182049, 'reg_lambda': 8.632921201766342}
-best_params_gbdt = {'n_estimators': 155, 'learning_rate': 0.02739221512374214, 'max_depth': 7, 'subsample': 0.8575194266893158, 'max_features': None}
+best_params_nb, best_score_nb = optimize_model(objective_nb)
+best_params_rf, best_score_rf = optimize_model(objective_rf)
+best_params_svc, best_score_svc = optimize_model(objective_svc)
+best_params_lr, best_score_lr = optimize_model(objective_lr)
+best_params_knn, best_score_knn = optimize_model(objective_knn,n_jobs=1)
+best_params_mlp, best_score_mlp = optimize_model(objective_mlp)
+best_params_adaboost, best_score_adaboost = optimize_model(objective_adaboost)
+best_params_xgb, best_score_xgb = optimize_model(objective_xgb)
+best_params_gbdt, best_score_gbdt = optimize_model(objective_gbdt)
+# best_params_nb = {'var_smoothing': 9.732524675926293e-07}
+# best_params_rf = {'n_estimators': 146, 'max_depth': 26, 'min_samples_split': 12, 'min_samples_leaf': 2, 'max_features': 'log2', 'bootstrap': False}
+# best_params_svc = {'C': 68.10438395969796, 'gamma': 0.0046650970854461545, 'kernel': 'rbf'}
+# best_params_lr = {'C': 60.801061547700456, 'penalty': 'l2', 'solver': 'lbfgs'}
+# best_params_knn = {'n_neighbors': 30, 'weights': 'distance', 'algorithm': 'auto'}
+# best_params_mlp = {'hidden_layer_sizes': (50,), 'activation': 'relu', 'solver': 'adam', 'alpha': 5.599647344838225e-05, 'learning_rate_init': 0.012301043983120692, 'early_stopping': True}
+# best_params_adaboost = {'n_estimators': 248, 'learning_rate': 0.4442056458984761}
+# best_params_xgb = {'max_depth': 6, 'learning_rate': 0.1406187747215624, 'n_estimators': 201, 'subsample': 0.9558079696044189, 'colsample_bytree': 0.5346372250120808, 'reg_alpha': 9.9402787182049, 'reg_lambda': 8.632921201766342}
+# best_params_gbdt = {'n_estimators': 155, 'learning_rate': 0.02739221512374214, 'max_depth': 7, 'subsample': 0.8575194266893158, 'max_features': None}
 # 6. 输出最佳超参数
 print("Best GaussianNB Params:", best_params_nb)
 print("Best Random Forest Params:", best_params_rf)
